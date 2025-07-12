@@ -1,8 +1,8 @@
-pkgbase = shortcuts
+pkgbase = mcds-keyring
 	pkgdesc = MCDS Keyring
 	pkgver = v1.0.0
 	pkgrel = 1
-	url = https://codeberg.org/Minecodes/shortcuts
+	url = https://repo.mcds.moe
 	arch = any
 	license = bsd-4-clause
 	depends = make
@@ -16,4 +16,4 @@ pkgbase = shortcuts
 	source = git+https://gitlab.archlinux.org/archlinux/archlinux-keyring.git
 	sha256sums = SKIP
 
-pkgname = shortcuts
+pkgname = mcds-keyring

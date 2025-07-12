@@ -14,4 +14,4 @@ pkgbase = shortcuts
 	source = git+https://codeberg.org/Minecodes/shortcuts.git
 	sha256sums = SKIP
 
-pkgname = shortcuts-bin
+pkgname = shortcuts

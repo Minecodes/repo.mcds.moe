@@ -7,8 +7,10 @@ It contains the packages of [Minecodes](https://mcds.moe).
 
 ## Adding the repository to your system
 ## Arch Linux
-1. Add the repo key: `curl https://repo.mcds.moe/repo.pgp | sudo pacman-key --add -`
-2. Add the repository to your `/etc/pacman.conf`: `echo -e '[mcds]\\nSigLevel = Optional TrustAll\\nServer = https://repo.mcds.moe/arch/$(uname -m)' | sudo tee -a /etc/pacman.conf`
+1. Add the repo key: `sudo pacman -U https://repo.mcds.moe/arch/any/mcds-keyring.pkg.tar.zst && sudo pacman-key --populate`
+2. Add the repository to your `/etc/pacman.conf`: `echo -e '[mcds]\\nServer = https://repo.mcds.moe/arch/$(uname -m)' | sudo tee -a /etc/pacman.conf`
+3. Update your package database: `sudo pacman -Syy`
+4. Install packages: `sudo pacman -S <package-name>`
 
 ## Packages
 ### Arch
