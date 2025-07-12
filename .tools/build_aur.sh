@@ -20,6 +20,7 @@ cp .config/makepkg.conf /etc/makepkg.conf
 echo "Building pikaur..."
 cd build/pikaur || exit 1
 sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+ls -al
 cd ../../public/arch/x86_64 || exit 1
 cp ../../build/pikaur/*.pkg.tar.zst .
 cp ../../build/pikaur/*.sig .
