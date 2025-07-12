@@ -43,5 +43,10 @@ cd /build || exit 1
 
 ls -al /build/build/partial/
 python3 /build/.tools/sort.py
+
+echo "Generating package index..."
+cd /build/public/arch/x86_64 || exit 1
+repo-add --verify --sign mcds.db.tar.gz *.pkg.tar.zst
+
 python3 /build/.tools/genPage.py
 exit 0
