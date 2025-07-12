@@ -9,6 +9,41 @@ try:
         print("Files in /build/build/partial:")
         for file in files:
             if file.endswith(".pkg.tar.zst") or file.endswith(".sig"):
+                if file.startswith("mcds-keyring-"):
+                    if file.endswith(".sig"):
+                        os.rename(
+                            os.path.join(partial_path, file),
+                            os.path.join(partial_path, "mcds-keyring.pkg.tar.zst.sig"),
+                        )
+                        os.system(
+                            f"cp {os.path.join(partial_path, 'mcds-keyring.pkg.tar.zst.sig')} /build/public/arch/any/"
+                        )
+                        os.system(
+                            f"cp {os.path.join(partial_path, 'mcds-keyring.pkg.tar.zst.sig')} /build/public/arch/x86_64/"
+                        )
+                        os.system(
+                            f"cp {os.path.join(partial_path, 'mcds-keyring.pkg.tar.zst.sig')} /build/public/arch/aarch64/"
+                        )
+                        os.system(
+                            f"cp {os.path.join(partial_path, 'mcds-keyring.pkg.tar.zst.sig')} /build/public/arch/armv7/"
+                        )
+                    else:
+                        os.rename(
+                            os.path.join(partial_path, file),
+                            os.path.join(partial_path, "mcds-keyring.pkg.tar.zst"),
+                        )
+                        os.system(
+                            f"cp {os.path.join(partial_path, 'mcds-keyring.pkg.tar.zst')} /build/public/arch/any/"
+                        )
+                        os.system(
+                            f"cp {os.path.join(partial_path, 'mcds-keyring.pkg.tar.zst')} /build/public/arch/x86_64/"
+                        )
+                        os.system(
+                            f"cp {os.path.join(partial_path, 'mcds-keyring.pkg.tar.zst')} /build/public/arch/aarch64/"
+                        )
+                        os.system(
+                            f"cp {os.path.join(partial_path, 'mcds-keyring.pkg.tar.zst')} /build/public/arch/armv7/"
+                        )
                 # if file is for platforms x86_64, aarch64, armv7, or any
                 if "-any." in file:
                     # copy file to /build/public/arch/any/
