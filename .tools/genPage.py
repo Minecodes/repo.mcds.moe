@@ -25,17 +25,17 @@ arch_any.sort()
 
 start += "\n#### x86_64\n"
 for file in arch_x86_64:
-    if file.endswith('.pkg.tar.zst'):
+    if file.endswith('.pkg.tar.zst') and not "-any." in file:
         start += f"- [{file}](/arch/x86_64/{file})\n"
 
 start += "\n#### aarch64\n"
 for file in arch_aarch64:
-    if file.endswith('.pkg.tar.zst'):
+    if file.endswith(".pkg.tar.zst") and not "-any." in file:
         start += f"- [{file}](/arch/aarch64/{file})\n"
 
 start += "\n#### armv7\n"
 for file in arch_armv7:
-    if file.endswith('.pkg.tar.zst'):
+    if file.endswith(".pkg.tar.zst") and not "-any." in file:
         start += f"- [{file}](/arch/armv7/{file})\n"
 
 start += "\n#### any\n"

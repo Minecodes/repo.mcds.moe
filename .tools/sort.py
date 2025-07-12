@@ -2,26 +2,43 @@
 import os
 
 
-partial_path = '/build/build/partial'
+partial_path = "/build/build/partial"
 try:
     files = os.listdir(partial_path)
     if files:
         print("Files in /build/build/partial:")
         for file in files:
-            if file.endswith('.pkg.tar.zst') or file.endswith('.sig'):
+            if file.endswith(".pkg.tar.zst") or file.endswith(".sig"):
                 # if file is for platforms x86_64, aarch64, armv7, or any
                 if "-any." in file:
-                  # copy file to /build/public/arch/any/
-                  os.system(f"cp {os.path.join(partial_path, file)} /build/public/arch/any/")
+                    # copy file to /build/public/arch/any/
+                    os.system(
+                        f"cp {os.path.join(partial_path, file)} /build/public/arch/any/"
+                    )
+                    os.system(
+                        f"cp {os.path.join(partial_path, file)} /build/public/arch/x86_64/"
+                    )
+                    os.system(
+                        f"cp {os.path.join(partial_path, file)} /build/public/arch/aarch64/"
+                    )
+                    os.system(
+                        f"cp {os.path.join(partial_path, file)} /build/public/arch/armv7/"
+                    )
                 elif "-x86_64." in file:
-                  # copy file to /build/public/arch/x86_64/
-                  os.system(f"cp {os.path.join(partial_path, file)} /build/public/arch/x86_64/")
+                    # copy file to /build/public/arch/x86_64/
+                    os.system(
+                        f"cp {os.path.join(partial_path, file)} /build/public/arch/x86_64/"
+                    )
                 elif "-aarch64." in file:
-                  # copy file to /build/public/arch/aarch64/
-                  os.system(f"cp {os.path.join(partial_path, file)} /build/public/arch/aarch64/")
+                    # copy file to /build/public/arch/aarch64/
+                    os.system(
+                        f"cp {os.path.join(partial_path, file)} /build/public/arch/aarch64/"
+                    )
                 elif "-armv7." in file:
-                  # copy file to /build/public/arch/armv7/
-                  os.system(f"cp {os.path.join(partial_path, file)} /build/public/arch/armv7/")
+                    # copy file to /build/public/arch/armv7/
+                    os.system(
+                        f"cp {os.path.join(partial_path, file)} /build/public/arch/armv7/"
+                    )
     else:
         print("No files found in /build/build/partial.")
 except FileNotFoundError:
