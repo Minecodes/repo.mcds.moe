@@ -20,8 +20,6 @@ cp .config/makepkg.conf /etc/makepkg.conf
 echo "Building pikaur..."
 cd build/pikaur || exit 1
 sudo -u builder makepkg -sr --sign --noconfirm || exit 1
-ls -al
-cd ../../public/arch/x86_64 || exit 1
-cp *.pkg.tar.zst /build/public/arch/x86_64/
-cp *.pkg.tar.zst.sig /build/public/arch/x86_64/
+ls -al /build/build/partial/
+python3 /build/.tools/sort.py
 exit 0
