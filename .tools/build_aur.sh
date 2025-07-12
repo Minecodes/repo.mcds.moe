@@ -29,6 +29,18 @@ sudo -u builder makepkg -sr --sign --noconfirm || exit 1
 cd /build || exit 1
 
 
+echo "Building rbcat..."
+cd build/rbcat || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building shortcuts-bin..."
+cd build/shortcuts-bin || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
 ls -al /build/build/partial/
 python3 /build/.tools/sort.py
 python3 /build/.tools/genPage.py
