@@ -22,6 +22,7 @@ cd build/pikaur || exit 1
 sudo -u builder makepkg -sr --sign --noconfirm || exit 1
 ls -al
 cd ../../public/arch/x86_64 || exit 1
-cp ./pikaur-*-any.pkg.tar.zst /build/public/arch/x86_64/
-cp ./pikaur-*-any.pkg.tar.zst.sig /build/public/arch/x86_64/
+rm 
+cp ./*.pkg.tar.zst /build/public/arch/x86_64/
+cp ./*.pkg.tar.zst.sig /build/public/arch/x86_64/
 exit 0
