@@ -41,7 +41,8 @@ jobs:
           gpg --export-secret-keys --armor --output signkey.asc 6F34C1C3902BBDFEFB0AE9A694826351362A2EA1
           gpg --export --armor --output public/repo.pgp --export 6F34C1C3902BBDFEFB0AE9A694826351362A2EA1
           cd build
-          git clone --depth 1 https://aur.archlinux.org/shortcuts-bin.git
+          cp -r ../packages/shortcuts .
+          cp -r ../packages/vmchamp .
           git clone --depth 1 https://aur.archlinux.org/lopriv.git
           git clone --depth 1 https://aur.archlinux.org/rbcat.git
           git clone --depth 1 https://aur.archlinux.org/pikaur.git
