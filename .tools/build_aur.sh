@@ -2,7 +2,7 @@
 echo "Updating system..."
 pacman -Syu --noconfirm
 echo "Installing dependencies..."
-pacman -S --noconfirm base-devel git go python3 python-pip gpg sudo
+pacman -S --noconfirm base-devel git go python3 python-pip gpgme sudo || exit 1
 useradd -m -G wheel -s /bin/bash builder
 echo "builder ALL=(ALL) NOPASSWD: ALL" > /etc/sudo
 sudo -u builder gpg --import signkey.asc
