@@ -12,6 +12,7 @@ chown builder:builder signkey.asc
 chown -R builder:builder /build/build
 chown -R builder:builder /build/build/*
 
+gpg --import signkey.asc
 sudo -u builder gpg --import signkey.asc
 pacman-key --add signkey.asc
 cp .config/makepkg.conf /etc/makepkg.conf
