@@ -1,0 +1,19 @@
+pkgbase = shortcuts
+	pkgdesc = MCDS Keyring
+	pkgver = v1.0.0
+	pkgrel = 1
+	url = https://codeberg.org/Minecodes/shortcuts
+	arch = any
+	license = bsd-4-clause
+	depends = make
+	depends = findutils
+	depends = pkgconf
+	depends = systemd
+	depends = python
+	depends = sequoia-sq
+	depends = hopenpgp-tools
+	depends = git
+	source = git+https://gitlab.archlinux.org/archlinux/archlinux-keyring.git
+	sha256sums = SKIP
+
+pkgname = shortcuts

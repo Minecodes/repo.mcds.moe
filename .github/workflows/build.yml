@@ -41,11 +41,12 @@ jobs:
           mkdir -p build/partial
           echo -n "repo.mcds.moe" > public/CNAME
           echo -n "$GPG_KEY" | base64 --decode | gpg --batch --import -v
-          gpg --export-secret-keys --armor --output signkey.asc 6F34C1C3902BBDFEFB0AE9A694826351362A2EA1
-          gpg --export --armor --output public/repo.pgp --export 6F34C1C3902BBDFEFB0AE9A694826351362A2EA1
+          gpg --export-secret-keys --armor --output signkey.asc 6E2ED1AF080C73ABDD7031C5A81F296D72A1530A
+          gpg --export --armor --output public/repo.pgp --export 6E2ED1AF080C73ABDD7031C5A81F296D72A1530A
           cd build
           cp -r ../packages/shortcuts .
           cp -r ../packages/vmchamp .
+          cp -r ../packages/mcds-keyring .
           git clone --depth 1 https://aur.archlinux.org/lopriv.git
           git clone --depth 1 https://aur.archlinux.org/rbcat.git
           git clone --depth 1 https://aur.archlinux.org/pikaur.git

@@ -1,0 +1,30 @@
+# Maintainer: Minecodes <contact at mcds.moe>
+pkgname=mcds-keyring
+_pkgname=archlinux-keyring
+pkgver=v1.0.0
+pkgrel=1
+pkgdesc="MCDS Keyring"
+arch=('any')
+url="https://repo.mcds.moe"
+license=('bsd-4-clause')
+depends=('make' 'findutils' 'pkgconf' 'systemd' 'python' 'sequoia-sq' 'hopenpgp-tools' 'git')
+source=("git+https://gitlab.archlinux.org/archlinux/archlinux-keyring.git")
+sha256sums=('SKIP')
+
+build() {
+  cd "${srcdir}/${_pkgname}"
+  curl -o Minecodes.asc https://keys.openpgp.org/vks/v1/by-fingerprint/BBD87E95C26CE6FBC23043A2E6CD3105E59C12D1
+  curl -o mcds.asc https://keys.openpgp.org/vks/v1/by-fingerprint/6E2ED1AF080C73ABDD7031C5A81F296D72A1530A
+  ./keyringctl import --name MCDS --main mcds.asc
+  ./keyringctl import --main Minecodes.asc
+  ./keyringctl build
+  cd build || exit 1
+  mv archlinux.gpg mcds.gpg
+  mv archlinux-revoked mcds-revoked
+  mv archlinux-trusted mcds-trusted
+}
+
+package() {
+  cd "${srcdir}/${_pkgname}"
+  install -Dm644 build/{mcds.gpg,mcds-revoked,mcds-trusted} -t "${pkgdir}/usr/share/pacman/keyrings/"
+}
