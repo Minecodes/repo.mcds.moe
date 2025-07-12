@@ -36,8 +36,28 @@ sudo -u builder makepkg -sr --sign --noconfirm || exit 1
 cd /build || exit 1
 
 
-echo "Building shortcuts-bin..."
-cd build/shortcuts-bin || exit 1
+echo "Building shortcuts..."
+cd build/shortcuts || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building vmchamp..."
+cd build/vmchamp || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building mods..."
+cd build/mods || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building charm-pop..."
+cd build/charm-pop || exit 1
+sed -i 's/charm-pop-bin/charm-pop/g' PKGBUILD
+sed -i 's/charm-pop-bin/charm-pop/g' .SRCINFO
 sudo -u builder makepkg -sr --sign --noconfirm || exit 1
 cd /build || exit 1
 
@@ -45,9 +65,11 @@ cd /build || exit 1
 ls -al /build/build/partial/
 python3 /build/.tools/sort.py
 
+
 echo "Generating package index..."
 cd /build/public/arch/x86_64 || exit 1
 repo-add --verify --sign mcds.db.tar.gz *.pkg.tar.zst
+
 
 python3 /build/.tools/genPage.py
 exit 0

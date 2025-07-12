@@ -46,6 +46,9 @@ jobs:
           git clone --depth 1 https://aur.archlinux.org/lopriv.git
           git clone --depth 1 https://aur.archlinux.org/rbcat.git
           git clone --depth 1 https://aur.archlinux.org/pikaur.git
+          git clone --depth 1 https://aur.archlinux.org/mods.git
+          git clone --depth 1 https://aur.archlinux.org/charm-pop-bin.git
+          mv charm-pop-bin charm-pop
           cd ..
       - name: Build AUR packages
         run: |
