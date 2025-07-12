@@ -13,6 +13,15 @@ try:
                 if "-any." in file:
                   # copy file to /build/public/arch/any/
                   os.system(f"cp {os.path.join(partial_path, file)} /build/public/arch/any/")
+                elif "-x86_64." in file:
+                  # copy file to /build/public/arch/x86_64/
+                  os.system(f"cp {os.path.join(partial_path, file)} /build/public/arch/x86_64/")
+                elif "-aarch64." in file:
+                  # copy file to /build/public/arch/aarch64/
+                  os.system(f"cp {os.path.join(partial_path, file)} /build/public/arch/aarch64/")
+                elif "-armv7." in file:
+                  # copy file to /build/public/arch/armv7/
+                  os.system(f"cp {os.path.join(partial_path, file)} /build/public/arch/armv7/")
     else:
         print("No files found in /build/build/partial.")
 except FileNotFoundError:
