@@ -5,6 +5,8 @@ echo "Installing dependencies..."
 pacman -S --noconfirm base-devel git go python3 python-pip gpgme sudo || exit 1
 useradd -m -G wheel -s /bin/bash builder
 echo "builder ALL=(ALL) NOPASSWD: ALL" > /etc/sudo
+chown -R builder:builder /home/builder
+chown builder:builder signkey.asc
 sudo -u builder gpg --import signkey.asc
 pacman-key --add signkey.asc
 cp .config/makepkg.conf /etc/makepkg.conf
