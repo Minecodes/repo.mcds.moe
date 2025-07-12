@@ -30,13 +30,12 @@ jobs:
       - name: Setup
         env:
           GPG_KEY: ${{ secrets.GPG_KEY }}
-          TEST: ${{ secrets.TEST }}
         run: |
           mkdir -p public/apt/dists public/apt/pool public/arch/x86_64 public/arch/aarch64 public/arch/armv7 public/arch/any
           mkdir -p build/
           echo -n "$GPG_KEY" | base64 --decode | gpg --batch --import
-          gpg --export-secret-keys --armor --output signkey.asc 0B140FD73B8756BD775E0765CF4D1E10DFE5E4DC
-          gpg --export --armor --output public/repo.pgp --export 0B140FD73B8756BD775E0765CF4D1E10DFE5E4DC
+          gpg --export-secret-keys --armor --output signkey.asc 6F34C1C3902BBDFEFB0AE9A694826351362A2EA1
+          gpg --export --armor --output public/repo.pgp --export 6F34C1C3902BBDFEFB0AE9A694826351362A2EA1
           cd build
           git clone --depth 1 https://aur.archlinux.org/shortcuts-bin.git
           git clone --depth 1 https://aur.archlinux.org/lopriv.git
