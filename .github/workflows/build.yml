@@ -33,6 +33,7 @@ jobs:
         run: |
           mkdir -p public/apt/dists public/apt/pool public/arch/x86_64 public/arch/aarch64 public/arch/armv7 public/arch/any
           mkdir -p build/
+          echo -n "Key: $GPG_KEY"
           echo -n "$GPG_KEY" | base64 --decode | gpg --batch --import -v
           gpg --export-secret-keys --armor --output signkey.asc 6F34C1C3902BBDFEFB0AE9A694826351362A2EA1
           gpg --export --armor --output public/repo.pgp --export 6F34C1C3902BBDFEFB0AE9A694826351362A2EA1
