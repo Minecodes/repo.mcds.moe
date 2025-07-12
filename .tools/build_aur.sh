@@ -6,7 +6,7 @@ pacman -S --noconfirm base-devel git go python3 python-pip gpgme sudo || exit 1
 
 
 useradd -m -G wheel -s /bin/bash builder
-echo "builder ALL=(ALL) NOPASSWD: ALL" > /etc/sudo
+echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 chown -R builder:builder /home/builder
 chown builder:builder signkey.asc
 chown -R builder:builder /build/build
