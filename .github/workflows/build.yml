@@ -33,7 +33,6 @@ jobs:
         run: |
           mkdir -p public/apt/dists public/apt/pool public/arch/x86_64 public/arch/aarch64 public/arch/armv7 public/arch/any
           mkdir -p build/
-          cp CNAME public/
           echo "$GPG_KEY" > signkey.asc
           gpg --import signkey.asc
           gpg --export --armor --output public/repo.pgp --export 0B140FD73B8756BD775E0765CF4D1E10DFE5E4DC
