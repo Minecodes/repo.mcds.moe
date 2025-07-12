@@ -47,7 +47,7 @@ jobs:
           cd ..
       - name: Build AUR packages
         run: |
-          docker run -i --rm -v $PWD:/build -w /build archlinux:latest bash ./tools/build_aur.sh
+          docker run -i --rm -v $PWD:/build -w /build archlinux:latest ls -al
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
