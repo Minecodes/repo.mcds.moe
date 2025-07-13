@@ -8,6 +8,7 @@ pkgbase = shortcuts
 	arch = armv7h
 	arch = i686
 	arch = riscv64
+	groups = mcds
 	license = bsd-4-clause
 	depends = go
 	depends = git

@@ -4,6 +4,7 @@ pkgbase = mcds-keyring
 	pkgrel = 1
 	url = https://repo.mcds.moe
 	arch = any
+	groups = mcds
 	license = bsd-4-clause
 	depends = make
 	depends = findutils
