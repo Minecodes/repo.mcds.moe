@@ -105,12 +105,6 @@ sudo -u builder makepkg -sr --sign --noconfirm || exit 1
 cd /build || exit 1
 
 
-echo "Building protontricks..."
-cd build/protontricks || exit 1
-sudo -u builder makepkg -sr --sign --noconfirm || exit 1
-cd /build || exit 1
-
-
 echo "Building informant..."
 cd build/informant || exit 1
 sudo -u builder makepkg -sr --sign --noconfirm || exit 1

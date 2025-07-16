@@ -58,7 +58,6 @@ jobs:
           git clone --depth 1 https://aur.archlinux.org/minecraft-launcher.git
           git clone --depth 1 https://aur.archlinux.org/vesktop.git
           git clone --depth 1 https://aur.archlinux.org/yay.git
-          git clone --depth 1 https://aur.archlinux.org/protontricks.git
           git clone --depth 1 https://aur.archlinux.org/informant.git
           git clone --depth 1 https://aur.archlinux.org/floorp-bin.git floorp
           git clone --depth 1 https://aur.archlinux.org/brave-bin.git brave
