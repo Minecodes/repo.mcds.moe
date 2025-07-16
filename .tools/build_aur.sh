@@ -74,12 +74,6 @@ sudo -u builder makepkg -sr --sign --noconfirm || exit 1
 cd /build || exit 1
 
 
-echo "Building waydroid..."
-cd build/waydroid || exit 1
-sudo -u builder makepkg -sr --sign --noconfirm || exit 1
-cd /build || exit 1
-
-
 echo "Building spotify..."
 cd build/spotify || exit 1
 sudo -u builder makepkg -sr --sign --noconfirm || exit 1
