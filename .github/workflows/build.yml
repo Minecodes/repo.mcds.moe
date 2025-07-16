@@ -60,7 +60,6 @@ jobs:
           git clone --depth 1 https://aur.archlinux.org/yay.git
           git clone --depth 1 https://aur.archlinux.org/informant.git
           git clone --depth 1 https://aur.archlinux.org/floorp-bin.git floorp
-          git clone --depth 1 https://aur.archlinux.org/brave-bin.git brave
           git clone --depth 1 https://aur.archlinux.org/ventoy-bin.git ventoy
           git clone --depth 1 https://aur.archlinux.org/zen-browser-bin.git zen-browser
           cd ..

@@ -119,14 +119,6 @@ sudo -u builder makepkg -sr --sign --noconfirm || exit 1
 cd /build || exit 1
 
 
-echo "Building brave..."
-cd build/brave || exit 1
-sed -i 's/-bin//g' PKGBUILD
-sudo -u builder makepkg --printsrcinfo > .SRCINFO
-sudo -u builder makepkg -sr --sign --noconfirm || exit 1
-cd /build || exit 1
-
-
 echo "Building ventoy..."
 cd build/ventoy || exit 1
 sed -i 's/-bin//g' PKGBUILD
