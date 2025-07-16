@@ -65,6 +65,7 @@ cd /build || exit 1
 echo "Building mcds-keyring..."
 cd build/mcds-keyring || exit 1
 sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cp mcds.gpg /build/public/ || exit 1
 cd /build || exit 1
 
 
