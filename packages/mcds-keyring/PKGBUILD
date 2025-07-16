@@ -24,7 +24,7 @@ build() {
   mv archlinux.gpg mcds.gpg
   mv archlinux-revoked mcds-revoked
   mv archlinux-trusted mcds-trusted
-  cp mcds.gpg "$back/../../public/"
+  cp mcds.gpg "$back/../../../public/"
 }
 
 package() {
