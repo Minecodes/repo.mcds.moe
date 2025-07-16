@@ -53,8 +53,6 @@ jobs:
           git clone --depth 1 https://aur.archlinux.org/mods.git
           git clone --depth 1 https://aur.archlinux.org/charm-pop-bin.git charm-pop
           git clone --depth 1 https://aur.archlinux.org/paru.git
-          git clone --depth 1 https://aur.archlinux.org/waydroid.git
-          git clone --depth 1 https://aur.archlinux.org/spotify.git
           git clone --depth 1 https://aur.archlinux.org/google-chrome.git
           git clone --depth 1 https://aur.archlinux.org/librewolf.git
           git clone --depth 1 https://aur.archlinux.org/zoom.git
