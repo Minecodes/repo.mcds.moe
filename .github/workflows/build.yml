@@ -53,6 +53,18 @@ jobs:
           git clone --depth 1 https://aur.archlinux.org/mods.git
           git clone --depth 1 https://aur.archlinux.org/charm-pop-bin.git
           mv charm-pop-bin charm-pop
+          git clone --depth 1 https://aur.archlinux.org/paru.git
+          git clone --depth 1 https://aur.archlinux.org/neofetch.git
+          git clone --depth 1 https://aur.archlinux.org/waydroid.git
+          git clone --depth 1 https://aur.archlinux.org/spotify.git
+          git clone --depth 1 https://aur.archlinux.org/google-chrome.git
+          git clone --depth 1 https://aur.archlinux.org/librewolf.git
+          git clone --depth 1 https://aur.archlinux.org/zoom.git
+          git clone --depth 1 https://aur.archlinux.org/minecraft-launcher.git
+          git clone --depth 1 https://aur.archlinux.org/vesktop.git
+          git clone --depth 1 https://aur.archlinux.org/yay.git
+          git clone --depth 1 https://aur.archlinux.org/protontricks.git
+          git clone --depth 1 https://aur.archlinux.org/informant.git
           cd ..
       - name: Build AUR packages
         run: |

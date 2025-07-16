@@ -68,6 +68,78 @@ sudo -u builder makepkg -sr --sign --noconfirm || exit 1
 cd /build || exit 1
 
 
+echo "Building paru..."
+cd build/paru || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building neofetch..."
+cd build/neofetch || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building waydroid..."
+cd build/waydroid || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building spotify..."
+cd build/spotify || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building google-chrome..."
+cd build/google-chrome || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building librewolf..."
+cd build/librewolf || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building zoom..."
+cd build/zoom || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building minecraft-launcher..."
+cd build/minecraft-launcher || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building vesktop..."
+cd build/vesktop || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building yay..."
+cd build/yay || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building protontricks..."
+cd build/protontricks || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building informant..."
+cd build/informant || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
 ls -al /build/build/partial/
 python3 /build/.tools/sort.py
 
