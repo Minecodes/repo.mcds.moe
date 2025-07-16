@@ -51,10 +51,8 @@ jobs:
           git clone --depth 1 https://aur.archlinux.org/rbcat.git
           git clone --depth 1 https://aur.archlinux.org/pikaur.git
           git clone --depth 1 https://aur.archlinux.org/mods.git
-          git clone --depth 1 https://aur.archlinux.org/charm-pop-bin.git
-          mv charm-pop-bin charm-pop
+          git clone --depth 1 https://aur.archlinux.org/charm-pop-bin.git charm-pop
           git clone --depth 1 https://aur.archlinux.org/paru.git
-          git clone --depth 1 https://aur.archlinux.org/neofetch.git
           git clone --depth 1 https://aur.archlinux.org/waydroid.git
           git clone --depth 1 https://aur.archlinux.org/spotify.git
           git clone --depth 1 https://aur.archlinux.org/google-chrome.git
@@ -65,6 +63,10 @@ jobs:
           git clone --depth 1 https://aur.archlinux.org/yay.git
           git clone --depth 1 https://aur.archlinux.org/protontricks.git
           git clone --depth 1 https://aur.archlinux.org/informant.git
+          git clone --depth 1 https://aur.archlinux.org/floorp-bin.git floorp
+          git clone --depth 1 https://aur.archlinux.org/brave-bin.git brave
+          git clone --depth 1 https://aur.archlinux.org/ventoy-bin.git ventoy
+          git clone --depth 1 https://aur.archlinux.org/zen-browser-bin.git zen-browser
           cd ..
       - name: Build AUR packages
         run: |

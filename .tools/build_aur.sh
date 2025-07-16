@@ -57,7 +57,7 @@ cd /build || exit 1
 echo "Building charm-pop..."
 cd build/charm-pop || exit 1
 sed -i 's/charm-pop-bin/charm-pop/g' PKGBUILD
-sed -i 's/charm-pop-bin/charm-pop/g' .SRCINFO
+sudo -u builder makepkg --printsrcinfo > .SRCINFO
 sudo -u builder makepkg -sr --sign --noconfirm || exit 1
 cd /build || exit 1
 
@@ -70,12 +70,6 @@ cd /build || exit 1
 
 echo "Building paru..."
 cd build/paru || exit 1
-sudo -u builder makepkg -sr --sign --noconfirm || exit 1
-cd /build || exit 1
-
-
-echo "Building neofetch..."
-cd build/neofetch || exit 1
 sudo -u builder makepkg -sr --sign --noconfirm || exit 1
 cd /build || exit 1
 
@@ -136,6 +130,38 @@ cd /build || exit 1
 
 echo "Building informant..."
 cd build/informant || exit 1
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building floorp..."
+cd build/floorp || exit 1
+sed -i 's/-bin//g' PKGBUILD
+sudo -u builder makepkg --printsrcinfo > .SRCINFO
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building brave..."
+cd build/brave || exit 1
+sed -i 's/-bin//g' PKGBUILD
+sudo -u builder makepkg --printsrcinfo > .SRCINFO
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building ventoy..."
+cd build/ventoy || exit 1
+sed -i 's/-bin//g' PKGBUILD
+sudo -u builder makepkg --printsrcinfo > .SRCINFO
+sudo -u builder makepkg -sr --sign --noconfirm || exit 1
+cd /build || exit 1
+
+
+echo "Building zen-browser..."
+cd build/zen-browser || exit 1
+sed -i 's/-bin//g' PKGBUILD
+sudo -u builder makepkg --printsrcinfo > SRCINFO
 sudo -u builder makepkg -sr --sign --noconfirm || exit 1
 cd /build || exit 1
 
