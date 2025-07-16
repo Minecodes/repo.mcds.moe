@@ -24,6 +24,7 @@ build() {
   mv archlinux.gpg mcds.gpg
   mv archlinux-revoked mcds-revoked
   mv archlinux-trusted mcds-trusted
+  echo "$back"
   cp mcds.gpg "$back/"
 }
 
