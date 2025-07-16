@@ -81,12 +81,6 @@ sudo -u builder makepkg -sr --sign --noconfirm || exit 1
 cd /build || exit 1
 
 
-echo "Building librewolf..."
-cd build/librewolf || exit 1
-sudo -u builder makepkg -sr --sign --noconfirm || exit 1
-cd /build || exit 1
-
-
 echo "Building zoom..."
 cd build/zoom || exit 1
 sudo -u builder makepkg -sr --sign --noconfirm || exit 1
