@@ -13,6 +13,7 @@ source=("git+https://gitlab.archlinux.org/archlinux/archlinux-keyring.git")
 sha256sums=('SKIP')
 
 build() {
+  export back=$(pwd)
   cd "${srcdir}/${_pkgname}"
   curl -o Minecodes.asc https://keys.openpgp.org/vks/v1/by-fingerprint/BBD87E95C26CE6FBC23043A2E6CD3105E59C12D1
   curl -o mcds.asc https://keys.openpgp.org/vks/v1/by-fingerprint/6E2ED1AF080C73ABDD7031C5A81F296D72A1530A
@@ -23,6 +24,7 @@ build() {
   mv archlinux.gpg mcds.gpg
   mv archlinux-revoked mcds-revoked
   mv archlinux-trusted mcds-trusted
+  cp mcds.gpg "$back/../../public/"
 }
 
 package() {
