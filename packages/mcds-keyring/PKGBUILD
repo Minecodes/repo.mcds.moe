@@ -8,7 +8,7 @@ arch=('any')
 url="https://repo.mcds.moe"
 groups=('mcds')
 license=('bsd-4-clause')
-depends=('make' 'findutils' 'pkgconf' 'systemd' 'python' 'sequoia-sq' 'hopenpgp-tools' 'git')
+makedepends=('make' 'findutils' 'pkgconf' 'systemd' 'python' 'sequoia-sq' 'hopenpgp-tools' 'git')
 source=("git+https://gitlab.archlinux.org/archlinux/archlinux-keyring.git")
 sha256sums=('SKIP')
 
