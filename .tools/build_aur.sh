@@ -93,12 +93,6 @@ sudo -u builder makepkg -sr --sign --noconfirm || exit 1
 cd /build || exit 1
 
 
-echo "Building vesktop..."
-cd build/vesktop || exit 1
-sudo -u builder makepkg -sr --sign --noconfirm || exit 1
-cd /build || exit 1
-
-
 echo "Building yay..."
 cd build/yay || exit 1
 sudo -u builder makepkg -sr --sign --noconfirm || exit 1
